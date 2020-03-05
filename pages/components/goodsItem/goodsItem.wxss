@@ -1,0 +1,42 @@
+/* pages/components/goodsItem/goodsItem.wxss */
+.zebra-goods-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+  width: 340rpx;
+  border: 2rpx solid #f4f4f4;
+  border-radius: 8rpx;
+  background-color: #fff;
+}
+.zebra-goods-item .item-img {
+  width: 100%;
+  height: 336rpx;
+  border-radius: 8rpx 8rpx 0 0;
+}
+.zebra-goods-item .item-foot {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 26rpx 16rpx;
+}
+.zebra-goods-item .item-title {
+  height: 42rpx;
+  line-height: 42rpx;
+  font-size: 30rpx;
+  color: #333333;
+}
+.zebra-goods-item .item-prices {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16rpx;
+}
+.zebra-goods-item .item-prices-current {
+  font-family: DINAlternate-Bold,DINAlternate;
+  font-weight: 700;
+  font-size: 34rpx;
+  color: #F32121;
+}
+
+.zebra-goods-item .item-prices-current .current-value {
+
+}

@@ -1,0 +1,13 @@
+<!--pages/components/goodsItem/goodsItem.wxml-->
+<view class="{{row.classes}}" bindtap="handlerNavigation">
+  <image class="item-img" wx:if="{{img}}" src="{{img}}" mode="scaleToFill" />
+  <view class="item-foot">
+    <text class="item-title ellipsis" decode="{{true}}">{{title}}</text>
+    <view class="item-prices">
+      <view class="item-prices-current">
+        <text class="current-value" decode="{{true}}">￥{{row.agentPriceStr}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+  

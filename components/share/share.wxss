@@ -1,0 +1,63 @@
+/* components/share/share.wxss */
+.share--zebra-share,
+.share--zebra-share.van-popup--bottom,
+.zebra-share.van-popup--bottom {
+  background-color: #f5f5f5;
+}
+.zebra-share .c-body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+.zebra-share .section-share {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 48rpx;
+  padding: 40rpx;
+}
+.zebra-share .share-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 32rpx;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  line-height: 1;
+}
+.zebra-share .share-item:after {
+  border: none;
+}
+.zebra-share .share-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  font-size: 48rpx;
+  background-color: #fff;
+}
+.zebra-share .share-item-title {
+  margin-top: 16rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.zebra-share .c-footer {
+  display: flex;
+}
+.zebra-share .c-footer .btn-share {
+  flex: 1;
+  padding: 18rpx 0;
+  background-color: #fff;
+  border: 0;
+  font-size: 28rpx;
+  color: #666666;
+}
+.zebra-share .c-footer .btn-share:after {
+  border: none;
+}
+

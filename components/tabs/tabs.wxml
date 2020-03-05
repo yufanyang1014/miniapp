@@ -1,0 +1,42 @@
+<!--components/tabs/tabs.wxml-->
+<!-- 示例1 -->
+<!-- <zebra-tabs active="{{tabIndex}}" 
+  bindchange="handlerChange" 
+  custom-class="example-tab" 
+  nav-class="example-nav" 
+  nav-line-class="example-nav-line"
+  tab-class="example-tab" 
+  tab-active-class="example-tab-actice"
+  line-height="{{1}}"
+  line-width="{{30}}">
+  <zebra-tab
+    wx:for="{{categories}}"
+    wx:key="nav_item_{{i}}"
+    title="{{item.title}}"
+  />
+</zebra-tabs> -->
+<!-- 示例2 -->
+<!-- <zebra-tabs active="{{tabIndex}}" 
+  bindchange="handlerChange" 
+  custom-class="example-tab" 
+  nav-class="example-nav" 
+  nav-line-class="example-nav-line"
+  tab-class="example-tab" 
+  tab-active-class="example-tab-actice">
+  <zebra-tab
+    wx:for="{{categories}}"
+    wx:key="nav_item_{{i}}">
+    {{item.title}}
+  </zebra-tab>
+</zebra-tabs> -->
+<view class="zebra-tabs {{customClass}}">
+  <scroll-view class="zebra-tabs-nav {{stickyClass}}" 
+    scroll-x="{{true}}"
+    scroll-left="{{scrollLeft}}"
+    scroll-with-animation="{{true}}">
+    <view class="zebra-tabs-wrap {{navClass}}">
+      <slot />
+      <view class="zebra-tabs-line {{navLineClass}}" style="{{ lineStyle }}"><slot name="line" /></view>
+    </view>
+  </scroll-view>
+</view>

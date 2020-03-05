@@ -1,0 +1,5 @@
+<!--components/radio/radio.wxml-->
+<view class="zebra-radio {{checked? 'active': ''}}" bindtap="handlerChange">
+  <view class="zebra-radio-icon {{checked? 'iconfont-radio-checked-o': 'iconfont-radio-o'}}"></view>
+  <view class="zebra-radio-label">{{label}}</view>
+</view>

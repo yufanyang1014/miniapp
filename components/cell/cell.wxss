@@ -1,0 +1,60 @@
+/* components/cell/cell.wxss */
+
+.zebra-cell{
+  flex: 1;
+  display: flex;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 28rpx;
+  background-color: #fff;
+}
+.zebra-cell-wrap{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+}
+.zebra-cell-border .zebra-cell-wrap {
+  border-bottom: 2rpx solid #f7f7f7;
+}
+.zebra-cell-icon{ 
+  display: inline-block;
+  margin-right: 10rpx;
+  font-size: 28rpx;
+}
+.zebra-cell-label{
+  display: inline-block;
+  margin-right: 10rpx;
+  min-width: 140rpx;
+  padding: 36rpx 0;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: #333333;
+  text-align: left;
+  line-height: 36rpx;
+}
+
+.zebra-cell-value{
+  flex: 1;
+  display: flex;
+  border: none;
+  margin-right: 8rpx;
+  height: 100rpx;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 28rpx;
+  color: #666666;
+}
+.zebra-cell-control {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.zebra-cell-arrow{
+  font-size: 28rpx;
+  color: #999999;
+}

@@ -1,0 +1,191 @@
+/* components/button/button.wxss */
+
+.zebra-btn{
+  display: flex;
+}
+.zebra-btn,
+.zebra-btn-ghost{
+    /* display: inline-block; */
+    padding: 0 8rpx;
+    box-sizing: content-box;
+    background: #FF0200;
+    border: 2rpx solid #FF0200;
+    border-radius: 8rpx;
+    font-size: 24rpx;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+}
+.zebra-btn:after,
+.zebra-btn-ghost:after{
+  content: '';
+  /* display: inline-block; */
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+  margin-top: 2rpx;
+}
+
+  /* 默认主题 */
+.zebra-btn.zebra-btn-primary{
+  background: linear-gradient(323deg,rgba(252,66,62,1) 0%,rgba(252,66,62,1) 100%);
+  background-color: rgba(252,66,62,1);
+  border-color: rgba(252,66,62,1);
+  /* #FC423E */
+  color: #FFF;
+}
+.zebra-btn.zebra-btn-primary.shadow{
+  box-shadow:0px 2px 4px 0px rgba(255,62,62,1);
+}
+
+.zebra-btn.zebra-btn-success{
+  background-color: #19aa37;
+  border-color: #19aa37;
+  color: #FFF;
+}
+.zebra-btn.zebra-btn-success.shadow{
+  box-shadow: 0 10rpx 20rpx 0 rgba(71,190,90,0.30);
+}
+
+.zebra-btn.zebra-btn-info{
+  background-color: #333333;
+  border-color: #333333;
+  color: #FFF;
+}
+.zebra-btn.zebra-btn-info.shadow{
+  box-shadow: 0 10rpx 20rpx 0 rgba(71,190,90,0.30);
+}
+
+.zebra-btn.zebra-btn-warning{
+  background-color: #FFB648;
+  border-color: #FFB648;
+  color: #FFF;
+}
+.zebra-btn.zebra-btn-warning.shadow{
+  box-shadow: 0 10rpx 20rpx 0 rgba(255,212,44,0.30);
+}
+ 
+.zebra-btn.zebra-btn-danger{
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color: #FFF;
+}
+.zebra-btn.zebra-btn-danger.shadow{
+  box-shadow: 0 10rpx 20rpx 0 rgba(30,88,187,0.30);
+}
+
+.zebra-btn.zebra-btn-primary:disabled,
+.zebra-btn.zebra-btn-primary.disabled,
+.zebra-btn.zebra-btn-success:disabled,
+.zebra-btn.zebra-btn-success.disabled,
+.zebra-btn.zebra-btn-info:disabled,
+.zebra-btn.zebra-btn-info.disabled,
+.zebra-btn.zebra-btn-waring:disabled,
+.zebra-btn.zebra-btn-waring.disabled,
+.zebra-btn.zebra-btn-danger:disabled,
+.zebra-btn.zebra-btn-danger.disabled {
+  color: #fff;
+  opacity: .6;
+}
+.zebra-btn:disabled.shadow,
+.zebra-btn.disabled.shadow{
+  box-shadow: 0 10rpx 20rpx 0 rgba(246,63,69,0.30);
+}
+
+  /* 幽灵主题 */
+.zebra-btn-ghost{
+  background: none;
+}
+.zebra-btn-ghost-primary.zebra-btn-ghost-primary{
+  border-color: rgba(252,66,62,1);
+  color: rgba(252,66,62,1);
+}
+.zebra-btn-ghost-primary.zebra-btn-ghost-success{
+  border-color: #19aa37;
+  color: #19aa37;
+}
+.zebra-btn-ghost-primary.zebra-btn-ghost-info{
+  border-color: #4A4A4A;
+  color: #4A4A4A;
+}
+.zebra-btn-ghost-primary.zebra-btn-ghost-warning{
+  border-color: #FFB648;
+  color: #FFB648;
+}
+.zebra-btn-ghost-primary.zebra-btn-ghost-danger{
+  border-color: #ff0000;
+  color: #ff0000;
+}
+.zebra-btn-ghost-primary.zebra-btn-ghost-disabled,
+.zebra-btn-ghost-primary.zebra-btn-ghost:disabled{
+  border-color: #cccccc;
+  color: #acacac;
+}
+  /* 尺寸 */
+.zebra-btn-xlarge{
+  padding: 30rpx 24rpx;
+  height: 32rpx;
+  font-size: 32rpx;
+}
+.zebra-btn-xlarge-square{
+  border-radius: 0;
+}
+.zebra-btn-xlarge-radius{
+  padding: 28rpx;
+  border-radius: 48rpx;
+}
+
+.zebra-btn-large{
+  height: 32rpx;
+  padding: 28rpx 20rpx;
+  font-size: 32rpx;
+}
+.zebra-btn-large-square{
+  border-radius: 0;
+}
+.zebra-btn-large-radius{
+  height: 32rpx;
+  padding: 28rpx 32rpx;
+  border-radius: 44rpx;
+}
+
+.zebra-btn-middle{
+  height: 28rpx;
+  padding: 20rpx 16rpx;
+  font-size: 28rpx;
+}
+.zebra-btn-middle-square{
+  border-radius: 0;
+}
+.zebra-btn-middle-radius{
+  padding: 20rpx;
+  border-radius: 36rpx;
+}
+
+.zebra-btn-small{
+  height: 24rpx;
+  padding: 16rpx 12rpx;
+  font-size: 24rpx;
+}
+.zebra-btn-small-square{
+  border-radius: 0;
+}
+.zebra-btn-small-radius{
+  padding: 16rpx;
+  border-radius: 30rpx;
+}
+.zebra-btn-mini{
+  height: 20rpx;
+  padding: 10rpx 8rpx;
+  font-size: 20rpx;
+}
+.zebra-btn-mini-square{
+  border-radius: 0;
+}
+.zebra-btn-mini-radius{
+  padding: 10rpx 8rpx;
+  border-radius: 22rpx;
+}

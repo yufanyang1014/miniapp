@@ -1,0 +1,20 @@
+/* components/safeFooter/safeFooter.wxss */
+
+.ibuy-safe-footer {
+
+}
+.ibuy-safe-footer.notch,
+.ibuy-safe-footer.notch .ibuy-safe-footer-inwrap{
+  padding-bottom: 68rpx;
+}
+.ibuy-safe-footer.fixed .ibuy-safe-footer-inwrap{
+  overflow: visible;
+  display: flex;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 4rpx 0 20rpx 4rpx rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}

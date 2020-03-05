@@ -1,0 +1,5 @@
+<!--components/loadMore/loadMore.wxml-->
+<view class="{{classes}}">
+  <image class="{{classIcon}}" wx:if="{{showLoading}}" src="../../assets/images/loading.svg" mode="widthFix"></image>
+  <text class="zebra-loadmore-tips">{{tip}}</text>
+</view>

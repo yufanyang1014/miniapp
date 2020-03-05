@@ -1,0 +1,11 @@
+<!--components/button/button.wxml-->
+<button form-type="button" 
+  class="{{classes}}" 
+  open-type="{{openType}}" 
+  disabled="{{disabled}}" 
+  plain="{{plain}}" 
+  style="{{styles}}" 
+  bindtap="handlerClick"
+  bindgetuserinfo="handlerGetuserinfo">
+  <slot></slot>
+</button>

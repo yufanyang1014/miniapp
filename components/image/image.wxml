@@ -1,0 +1,12 @@
+<!--components/image/image.wxml-->
+<view class="{{classes}}">
+    <view class="ibuy-image-corn ibuy-pic-corn {{cornSize?'large-corn':''}}" wx:if="{{countCorn}}"></view>
+    <image class="lazy" src="../../assets/images/img-lazy.png" mode="scaleToFill" />
+    <image class="img" wx:if="{{filterSrc}}" src="{{filterSrc}}" mode="{{mode}}" />
+    <view wx:if="{{markType}}" 
+      class="ibuy-image-mark" 
+      style="{{markTypestyles}}">{{markTypeStr}}</view>
+    <view class="mark-storage-empty" wx:if="{{storage < 1}}">暂时缺货</view>
+    <!--<image class="mark-dobule-eleven" wx:if="{{doubleEleven}}" src="../../assets/images/home/label_11.png" mode="scaleToFill"></image>-->
+    <slot></slot>
+  </view>

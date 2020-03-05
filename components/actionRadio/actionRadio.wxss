@@ -1,0 +1,56 @@
+/* components/actionRadio/actionRadio.wxss */
+
+.zebra-action-radio {}
+.zebra-action-radio .c-radio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 18px 20px;
+  color: #999999;
+  font-size: 14px;
+}
+.zebra-action-radio .c-radio-header .title {
+  flex: 1;
+  text-align: center;
+}
+.zebra-action-radio .c-radio-header .btn-radio-cancel,.btn-radio-confirm {
+  display: flex;
+  justify-content: center;
+  color: #ff3205;
+  font-size: 16px;
+}
+.zebra-action-radio .c-radio-header .btn-radio-cancel{
+  color: #666666;
+}
+
+.zebra-action-radio .c-radio-body {
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.zebra-action-radio .c-radio-body .radio-cell {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  border-top: 1px solid #f4f4f4;
+  font-size: 15px;
+  color: #333333;
+}
+.zebra-action-radio .c-radio-body .radio-cell-label {
+  flex: 1;
+  margin-right: 10px;
+}
+.zebra-action-radio .c-radio-body .radio-cell-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  color: #C8C8C8;
+  font-size: 18px;
+}
+.zebra-action-radio .c-radio-body .radio-cell.active .radio-cell-control {
+  color: #ff3205;
+}

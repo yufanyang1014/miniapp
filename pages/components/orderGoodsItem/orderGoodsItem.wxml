@@ -1,0 +1,31 @@
+<!--pages/components/orderItem/OrderItem.wxml-->
+<view class="ibuy-order-goods-item">
+  <view class="ibuy-order-goods-item-cover">
+    <image class="ibuy-order-goods-item-cover-img" wx:if="{{img}}" src="{{img}}" mode="scaleToFill" />
+  </view>
+  <view class="ibuy-order-goods-item-desc">
+    <text class="desc-dt ellipsis2" decode="{{true}}">{{title}}</text>
+    <text class="desc-dd">{{specJsonStr}}</text>
+  </view>
+  <view class="ibuy-order-goods-item-info">
+    <view class="info-price">{{level === 3? 'HD': '￥'}}{{price}}</view>
+      <view class="info-price" wx:if="{{level === 3}}">￥1.00</view>
+      <view class="info-number">x{{number}}</view>
+    <view class="info-status" wx:if="{{status === 11 || status === 12}}">
+      <zebra-button 
+        flex 
+        plain 
+        size="mini" 
+        type="info" 
+        style="display:flex;width:88rpx" 
+        catchtap="handlerRefund" 
+        wx:if="{{refundStatus === 0 && isGift !== 1}}">退款</zebra-button>
+    </view>
+    <view class="info-status" wx:if="{{refundStatus !== 0}}">
+      <text class="info-status-warning" wx:if="{{refundStatus === 1}}">{{REFUND_STATUS[refundStatus]}}</text>
+      <text class="info-status-warning" wx:if="{{refundStatus === 2}}">{{REFUND_STATUS[refundStatus]}}</text>
+      <text class="info-status-warning" wx:if="{{refundStatus === 3}}">{{REFUND_STATUS[refundStatus]}}</text>
+      <text class="info-status-warning" wx:if="{{refundStatus === 4}}">{{REFUND_STATUS[refundStatus]}}</text>
+    </view>
+  </view>
+</view>

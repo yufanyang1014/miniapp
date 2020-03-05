@@ -1,0 +1,11 @@
+<!--components/cell/cell.wxml-->
+<view class="{{classes}}">
+  <view class="zebra-cell-wrap">
+    <view class="zebra-cell-icon {{icon}}" wx:if="{{icon}}"></view>
+    <view class="zebra-cell-label {{labelClass}}" wx:if="{{label}}">{{label}}</view>
+    <view class="zebra-cell-value" wx:if="{{value}}">{{value}}</view>
+    <view class="zebra-cell-control" wx:else><slot></slot></view>
+    <slot name="right"></slot>
+    <view class="zebra-cell-arrow iconfont-front" wx:if="{{isLink}}"></view>
+  </view>
+</view>

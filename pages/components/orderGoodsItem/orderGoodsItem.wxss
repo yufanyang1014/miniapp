@@ -1,0 +1,69 @@
+/* pages/components/orderItem/OrderItem.wxss */
+
+.ibuy-order-goods-item {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+  background-color: #FAFAFA;
+}
+.ibuy-order-goods-item-cover {
+  margin-right: 20rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 4rpx;
+}
+.ibuy-order-goods-item-cover-img {
+  width: 100%;
+  height: 100%;
+}
+.ibuy-order-goods-item-desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.ibuy-order-goods-item-desc .desc-dt {
+  line-height: 1.5;
+  font-size: 26rpx;
+  color: #333333;
+}
+.ibuy-order-goods-item-desc .desc-dd {
+  margin-top: 20rpx;
+  font-size: 22rpx;
+  color: #999999;
+}
+
+.ibuy-order-goods-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 8rpx;
+  margin-left: 20rpx;
+  line-height: 1.5;
+  font-size: 20rpx;
+  text-align: right;
+}
+.ibuy-order-goods-item-info .info-price {
+  color: #333333;
+}
+.ibuy-order-goods-item-info .info-number {
+  color: #999999;
+}
+
+.ibuy-order-goods-item-info .info-status {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 44px;
+  font-size: 12px;
+}
+.ibuy-order-goods-item-info .info-status-warning {
+  color: #FC903E;
+}
+.ibuy-order-goods-item-info .info-status-success {
+  color: #19aa37;
+}
+.ibuy-order-goods-item-info .info-status-danger {
+  color: #ff0000;
+}
+

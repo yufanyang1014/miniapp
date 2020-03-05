@@ -1,0 +1,48 @@
+/* components/input/input.wxss */
+.zebra-input {
+  flex: 1;
+  display: flex;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 28rpx;
+  background-color: #fff;
+}
+.zebra-input .input-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  border-bottom: 2rpx solid #f7f7f7;
+  align-items: center;
+}
+.zebra-input .input-label {
+   display: inline-block;
+  margin-right: 10rpx;
+  min-width: 140rpx;
+  padding: 36rpx 0;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: #333333;
+  text-align: left;
+  line-height: 36rpx;
+}
+
+.zebra-input .input-value {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding-right: 32rpx;
+  border: none;
+  height: 100rpx;
+  align-items: center;
+  text-align: left;
+  font-size: 28rpx;
+  color: #666666;
+}
+.zebra-input .input-placeholder {
+  color: #CCCCCC;
+}

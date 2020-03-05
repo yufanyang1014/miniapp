@@ -1,0 +1,36 @@
+/* components/tabs/tabs.wxss */
+.zebra-tabs {
+  flex: 1;
+  display: flex;
+  height: 88rpx;
+}
+.zebra-tabs-nav {
+  width: 100%;
+  background-color: #fff;
+}
+.zebra-tabs-nav:before,
+.zebra-tabs-nav:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 2rpx;
+  background-color: #f1f1f1;
+}
+.zebra-tabs-nav:after {
+  top: auto;
+  bottom: 0;
+}
+.zebra-tabs-wrap {
+  position: relative;
+  overflow: visible;
+  display: inline-flex;
+  flex-direction: row;
+}
+.zebra-tabs-line {
+  overflow: visible;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0rpx;
+  background-color: #f00;
+}

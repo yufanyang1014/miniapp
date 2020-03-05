@@ -1,0 +1,59 @@
+{
+  "name": "miniapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@code.aliyun.com:myibuy/miniapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tweenjs/tween.js": "^17.3.0",
+    "amap-wx": "^0.0.2",
+    "miniprogram-computed": "0.0.7",
+    "regenerator-runtime": "^0.13.1",
+    "vant-weapp": "^0.5.4",
+    "wx-axios": "^0.0.7",
+    "wxbarcode": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-import": "^1.11.0",
+    "babel-runtime": "^6.26.0",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "lint-staged": "^8.1.5"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "pages/**/*.{js}": [
+      "eslint",
+      "git add"
+    ],
+    "constant/**/*.{js}": [
+      "eslint",
+      "git add"
+    ],
+    "service/**/*.{js}": [
+      "eslint",
+      "git add"
+    ],
+    "utils/**/*.{js}": [
+      "eslint",
+      "git add"
+    ],
+    "components/**/*.{js}": [
+      "eslint",
+      "git add"
+    ]
+  }
+}

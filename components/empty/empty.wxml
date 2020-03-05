@@ -1,0 +1,5 @@
+<!--components/empty/empty.wxml-->
+<view class="zebra-empty">
+  <image class="zebra-empty-type" wx:if="{{img}}" src="{{img}}" mode="widthFix" />
+  <text class="zebra-empty-msg">{{msg}}</text>
+</view>

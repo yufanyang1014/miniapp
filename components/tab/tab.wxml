@@ -1,0 +1,7 @@
+<!--components/tab/tab.wxml-->
+<view class="{{classes}}" bindtap="handlerTap">
+  <view class="zebra-tab-content">
+    <view class="zebra-tab-title" wx:if="{{title}}">{{title}}</view>
+    <slot wx:else />
+  </view>
+</view>

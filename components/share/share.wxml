@@ -1,0 +1,25 @@
+<!--components/share/share.wxml-->
+<van-popup custom-class="zebra-share" safe-area-inset-bottom="{{safeAreaInsetBottom}}" show="{{visible}}" position="bottom" bindclose="handlerCancel">
+  <view class="c-body">
+    <view class="section-share">
+      <button class="share-item"
+        wx:for="{{list}}"
+        wxfor-item="item"
+        wxfor-index="i"
+        wx:key="i"
+        data-open-type="{{item.openType}}"
+        open-type="{{item.openType}}"
+        bindtap="handlerShare"
+      >
+        <view class="share-item-icon {{item.icon}}" style="color: {{item.color}}"></view>
+        <view class="share-item-title">{{item.title}}</view>
+      </button>
+    </view>
+  </view>
+  <view class="c-footer">
+    <button class="btn-share" bindtap="handlerCancel">
+      <text decode="{{true}}" space="{{true}}">取&nbsp;消</text>
+    </button>
+  </view>
+</van-popup>
+

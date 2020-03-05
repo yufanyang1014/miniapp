@@ -1,0 +1,20 @@
+<!--components/actionRadio/actionRadio.wxml-->
+<van-popup show="{{value}}" position="bottom" custom-class="zebra-action-radio" bind:close="handlerCancel">
+  <view class="c-radio-header">
+    <view class="btn-radio-cancel" bindtap="handlerCancel">取消</view>
+    <text class="title" wx:if="{{title}}">{{title}}</text>
+    <view class="btn-radio-confirm" bindtap="handlerConfirm">确定</view>
+  </view>
+  <view class="c-radio-body">
+    <view class="radio-cell {{index === i? 'active': ''}}"
+      wx:for="{{values}}"
+      wx:for-item="item"
+      wx:for-index="i"
+      wx:key="action_sheet_item_${item.key}_{{i}}"
+      data-index="{{i}}"
+      bindtap="handlerChange">
+      <view class="radio-cell-label">{{item.value}}</view>
+      <view class="radio-cell-control {{index===i? 'iconfont-radio-checked-o': 'iconfont-radio-o'}}"></view>
+    </view>
+  </view>
+</van-popup>

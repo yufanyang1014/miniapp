@@ -1,0 +1,72 @@
+/* components/image/image.wxss */
+.ibuy-image {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.ibuy-image .lazy {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+.ibuy-image .img {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.ibuy-image-corn {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.ibuy-image-corn.large-corn {
+  width: 80px;
+  height: 80px;
+}
+
+.ibuy-image-mark {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  height: 40px;
+  border-top-left-radius: 20px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  background: #fff;
+}
+.ibuy-image .mark-storage-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50rpx;
+  margin-left: -50rpx;
+  width: 100rpx;
+  height: 100rpx;
+  padding: 24rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+  line-height: 1.4;
+  font-size: 22rpx;
+  color: #fff;
+}
+.ibuy-image .mark-dobule-eleven {
+  position: absolute;
+  top: 18rpx;
+  left: 18rpx;
+  width: 128rpx;
+  height: 54rpx;
+}

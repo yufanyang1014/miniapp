@@ -1,0 +1,17 @@
+<view class="{{classes}}">
+  <view class="input-wrap">
+    <view class="input-label {{labelClass}}" wx:if="{{label}}">{{label}}</view>
+    <view class="input-value {{!value && placeholder? 'input-placeholder': ''}}" wx:if="{{readonly}}">{{value || placeholder}}</view>
+    <input class="input-value" wx:else
+      password="{{type==='password'}}" 
+      type="{{type}}" 
+      placeholder="{{placeholder}}"
+      placeholder-class="input-placeholder"
+      disabled="{{disabled}}"
+      maxlength="{{maxlength}}"
+      confirm-type="{{confirmType}}"
+      value="{{value}}"
+      bindinput="handlerInput"></input>
+    <slot></slot>
+  </view>
+</view>

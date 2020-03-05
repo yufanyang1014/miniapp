@@ -1,0 +1,36 @@
+<!--components/toast/toast.wxml-->
+<view >
+  <!-- <van-overlay
+    wx:if="{{ mask || forbidClick }}"
+    show="{{ show }}"
+    mask="{{ mask }}"
+    z-index="{{ zIndex }}"
+  /> -->
+  <van-transition
+    show="{{ show }}"
+    enter-class="{{transitionName}}-enter"
+    enter-active-class="{{transitionName}}-enter-active"
+    leave-class="{{transitionName}}-leave"
+    leave-active-class="{{transitionName}}-leave-active"
+    custom-style="z-index: {{ zIndex }}"
+    custom-class="zebra-toast__container"
+  >
+    <view class="{{classes}}" catch:touchmove="noop">
+      <!-- text only -->
+      <text wx:if="{{ type === 'info' }}">{{ message }}</text>
+
+      <!-- with icon -->
+      <block wx:else>
+        <!-- <van-loading
+          wx:if="{{ type === 'loading' }}"
+          color="white"
+          type="{{ loadingType }}"
+          custom-class="zebra-toast__loading"
+        />
+        <van-icon wx:else class="zebra-toast__icon" name="{{ type }}" /> -->
+        <view class="{{iconClasses}}"></view>
+        <text wx:if="{{ message }}" class="zebra-toast__info">{{ message }}</text>
+      </block>
+    </view>
+  </van-transition>
+</view>

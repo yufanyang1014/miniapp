@@ -1,0 +1,69 @@
+{
+  "pages": [
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f1f1f1",
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "斑马西西",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "text": "采购",
+        "iconPath": "/assets/images/icon-tabbar-home@2x.png",
+        "selectedIconPath": "/assets/images/icon-tabbar-home-selected@2x.png"
+      },
+      {
+        "pagePath": "pages/cart/index/index",
+        "text": "购物车",
+        "iconPath": "/assets/images/icon-tabbar-cart@2x.png",
+        "selectedIconPath": "/assets/images/icon-tabbar-cart-selected@2x.png"
+      },
+      {
+        "pagePath": "pages/my/index/index",
+        "text": "我的",
+        "iconPath": "/assets/images/icon-tabbar-my@2x.png",
+        "selectedIconPath": "/assets/images/icon-tabbar-my-selected@2x.png"
+      }
+    ],
+    "backgroundColor": "#fff",
+    "color": "#8e8e93",
+    "selectedColor": "#000000"
+  },
+  "usingComponents": {
+    "van-transition": "/miniprogram_npm/vant-weapp/transition/index",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "van-stepper": "/miniprogram_npm/vant-weapp/stepper/index",
+    "van-swipe-cell": "/miniprogram_npm/vant-weapp/swipe-cell/index",
+    "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+    "zebra-action-radio": "/components/actionRadio/actionRadio",
+    "zebra-cell": "/components/cell/cell",
+    "zebra-form-cell": "/components/formCell/formCell",
+    "zebra-radio": "/components/radio/radio",
+    "zebra-button": "/components/button/button",
+    "zebra-empty": "/components/empty/empty",
+    "zebra-toast": "/components/toast/toast",
+    "zebra-input": "/components/input/input",
+    "zebra-image": "/components/image/image",
+    "zebra-share": "/components/share/share",
+    "zebra-tab": "/components/tab/tab",
+    "zebra-tabs": "/components/tabs/tabs",
+    "zebra-load-more": "/components/loadMore/loadMore",
+    "zebra-drop-down": "/components/dropDown/dropDown",
+    "zebra-safe-footer": "/components/safeFooter/safeFooter"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxca1e7ba3fe18ff12"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

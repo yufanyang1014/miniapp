@@ -1,0 +1,20 @@
+/* components/radio/radio.wxss */
+.zebra-radio {
+  display: flex;
+  margin-right: 12rpx;
+  flex-direction: row;
+  align-items: center;
+  font-size: #333333;
+  font-size: 28rpx;
+}
+.zebra-radio-icon {
+  margin-right: 8rpx;
+  font-size: 32rpx;
+}
+.zebra-radio-value {
+  font-size: 24rpx;
+}
+
+.zebra-radio.active {
+  color: #E4281D;
+}

@@ -1,0 +1,64 @@
+/* components/loadMore/loadMore.wxss */
+
+@keyframes weuiLoading {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+.zebra-loadmore {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  margin: 36rpx auto;
+  width: 80%;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.zebra-loadmore-icon {
+  position: relative;
+  top: 0rpx;
+  width: 36rpx;
+  height: 36rpx;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: weuiLoading 1s steps(12, end) infinite;
+  animation: weuiLoading 1s steps(12, end) infinite;
+}
+
+.zebra-loadmore-tips {
+  display: inline-block;
+  margin-left: 8rpx;
+  text-align: center;
+  color: #333333;
+}
+
+.zebra-loadmore.zebra-loadmore-line {
+  display: flex;
+}
+
+.zebra-loadmore.zebra-loadmore-line:before,
+.zebra-loadmore.zebra-loadmore-line:after{
+  display: inline-block;
+  content: "";
+  position: relative;
+  flex: 1;
+  -webkit-box-flex: 1;
+  top: -2rpx;
+  margin-top: 20rpx;
+  border-top: 2rpx solid #e5e5e5;
+}
+
+.zebra-loadmore.zebra-loadmore-line .zebra-loadmore-tips {
+  padding: 0 20rpx;
+}

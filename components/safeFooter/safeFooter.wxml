@@ -1,0 +1,6 @@
+<!--components/safeFooter/safeFooter.wxml-->
+<view class="{{classes}}">
+  <view class="ibuy-safe-footer-inwrap">
+    <slot></slot>
+  </view>
+</view>
