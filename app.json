@@ -1,6 +1,7 @@
 {
   "pages": [
-    
+    "pages/home/index/index",
+    "pages/my/index/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -14,21 +15,15 @@
     "list": [
       {
         "pagePath": "pages/home/index/index",
-        "text": "采购",
-        "iconPath": "/assets/images/icon-tabbar-home@2x.png",
-        "selectedIconPath": "/assets/images/icon-tabbar-home-selected@2x.png"
-      },
-      {
-        "pagePath": "pages/cart/index/index",
-        "text": "购物车",
-        "iconPath": "/assets/images/icon-tabbar-cart@2x.png",
-        "selectedIconPath": "/assets/images/icon-tabbar-cart-selected@2x.png"
+        "text": "首页",
+        "iconPath": "/assets/images/tab-home.png",
+        "selectedIconPath": "/assets/images/tab-home-act.png"
       },
       {
         "pagePath": "pages/my/index/index",
         "text": "我的",
-        "iconPath": "/assets/images/icon-tabbar-my@2x.png",
-        "selectedIconPath": "/assets/images/icon-tabbar-my-selected@2x.png"
+        "iconPath": "/assets/images/tab-my.png",
+        "selectedIconPath": "/assets/images/tab-my-act.png"
       }
     ],
     "backgroundColor": "#fff",
@@ -58,7 +53,7 @@
     "zebra-safe-footer": "/components/safeFooter/safeFooter"
   },
   "navigateToMiniProgramAppIdList": [
-    "wxca1e7ba3fe18ff12"
+    "wx9e0b65bedfdb26e7"
   ],
   "permission": {
     "scope.userLocation": {

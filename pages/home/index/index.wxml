@@ -1,0 +1,6 @@
+<!--pages/home/index/index.wxml-->
+<view class="page-home">
+ <view class="page-header"></view>
+ <view class="page-body"></view>
+ <view class="page-footer"></view>
+</view>

@@ -36,8 +36,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.2",
-	"appid": "wxda46875872293c15",
-	"projectname": "zebra-proxy-miniapp",
+	"appid": "wx65600876d6ec101e",
+	"projectname": "miniapp",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
