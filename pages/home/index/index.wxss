@@ -1,1 +1,103 @@
 /* pages/home/index/index.wxss */
+.page-home {
+
+}
+
+.page-home .page-header {
+    padding-top: 80rpx;
+}
+
+.page-home .page-header .section-search {
+    position: fixed;
+    align-items: center;
+    width: calc(100% - 60rpx);
+    top: 0;
+    height: 80rpx;
+    background: #ffffff;
+    display: flex;
+    padding: 0 30rpx;
+}
+
+.page-home .page-header .section-search .location {
+    width: 160rpx;
+    font-size: 28rpx;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.page-home .page-header .section-search .location .location-o {
+    font-size: 30rpx;
+    vertical-align: middle;
+    padding-right: 10rpx;
+}
+
+.page-home .page-header .section-search .serach-input {
+    flex: 1;
+    height: 50rpx;
+    background: #f3f3f3;
+    border-radius: 30rpx;
+    font-size: 24rpx;
+    color: #999999;
+    padding-left: 60rpx;
+    position: relative;
+}
+
+.page-home .page-header .section-search .serach-input .search-icon {
+    position: absolute;
+    left: 20rpx;
+    top: 12rpx;
+}
+
+.page-home .page-header .slider-img {
+    width: 100%;
+    height: 400rpx;
+}
+
+.page-home .page-header .slider-img .test-iamge {
+    width: 100%;
+    height: 100%;
+}
+
+.page-home .page-body {
+    padding-bottom: 24rpx;
+}
+
+.page-home .page-body .block-item {
+    display: inline-block;
+    width: 187.5rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #eeeeee;
+    border-right: 1rpx solid #eeeeee;
+}
+
+.un-active {
+    background: #ffffff;
+    color: #333333;
+}
+
+.active {
+    background: orangered;
+    color: #ffffff;
+}
+
+.page-home .page-footer {
+    padding: 0 30rpx;
+}
+
+.page-home .page-footer .title-ch {
+    font-size: 30rpx;
+    color: #333333;
+    font-weight: bold;
+    padding-bottom: 20rpx;
+}
+
+.page-home .page-footer .title-ch .title-en {
+    font-size: 20rpx;
+    color: #999999;
+    padding-left: 10rpx;
+    font-weight: normal;
+}

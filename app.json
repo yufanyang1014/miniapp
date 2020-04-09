@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/home/index/index",
+    "pages/home/detail/detail",
     "pages/my/index/index"
   ],
   "window": {
@@ -36,6 +37,7 @@
     "van-stepper": "/miniprogram_npm/vant-weapp/stepper/index",
     "van-swipe-cell": "/miniprogram_npm/vant-weapp/swipe-cell/index",
     "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
     "zebra-action-radio": "/components/actionRadio/actionRadio",
     "zebra-cell": "/components/cell/cell",
     "zebra-form-cell": "/components/formCell/formCell",

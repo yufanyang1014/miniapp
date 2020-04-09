@@ -1,6 +1,6 @@
 <!--pages/home/detail/detail.wxml-->
-<view class="page-home">
-  <view class="page-header"></view>
+<view class="page-detail">
+  <view class="page-header">建设中...</view>
   <view class="page-body"></view>
   <view class="page-footer"></view>
 </view>

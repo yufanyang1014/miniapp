@@ -11,7 +11,22 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    image: {
+      type: String,
+      value: '',
+    },
+    title: {
+      type: String,
+      value: '',
+    },
+    name: {
+      type: String,
+      value: '',
+    },
+    time: {
+      type: String,
+      value: '',
+    }
   },
 
   /**
@@ -25,6 +40,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    navigatePage() {
+      wx.navigateTo({ url: '/pages/home/detail/detail' })
+    },
   }
 })

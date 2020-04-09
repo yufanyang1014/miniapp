@@ -1,2 +1,14 @@
 <!--pages/home/components/list/list.wxml-->
-<text>pages/home/components/list/list.wxml</text>
+<view class="list-container">
+  <view class="list-left">
+    <image class="left-img" src="{{image}}"  />
+  </view>
+  <view class="list-right" bindtap="navigatePage">
+    <view class="title">{{title}}</view>
+    <view class="desc">
+      <view><text class="label">发布人：</text><text class="value">{{name}}</text></view>
+      <view><text class="label">发布时间：</text><text class="value">{{time}}</text></view>
+      <view class="icon-serve">供给</view>
+    </view>
+  </view>
+</view>

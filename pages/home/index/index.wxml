@@ -1,6 +1,34 @@
 <!--pages/home/index/index.wxml-->
 <view class="page-home">
- <view class="page-header"></view>
- <view class="page-body"></view>
- <view class="page-footer"></view>
+  <view class="page-header">
+    <view class="section-search">
+      <view class="location"><van-icon name="location-o" custom-class="location-o" />苏州</view>
+      <input placeholder="请输入标题进行搜索" class="serach-input"><van-icon name="search" class="search-icon" /></input>
+    </view>
+    <view class="slider-img">
+      <image class="test-iamge" src="../../../assets/images/test.jpeg"/>
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="block-item {{ activeIndex===index ? 'active' : 'un-active' }}"
+        wx:for="{{dataMockBlock}}" 
+        wx:for-index="index" 
+        wx:for-item="item"
+        wx:key="index"
+        data-idx="{{index}}"
+        bindtap="handlerChange">{{item.title}}</view>
+  </view>
+  <view class="page-footer">
+    <view class="title-ch">苏州机遇<text class="title-en">OPPORTUNITIES IN JIANGSU</text></view>
+    <view wx:for="{{dataMockList}}" 
+        wx:for-index="index" 
+        wx:for-item="item"
+        wx:key="index">
+      <list-item 
+        image="{{item.image}}"
+        title="{{item.title}}"
+        name="{{item.name}}"
+        time="{{item.time}}"/>
+    </view>
+  </view>
 </view>

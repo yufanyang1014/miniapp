@@ -1,1 +1,54 @@
 /* pages/home/components/list/list.wxss */
+.list-container {
+    display: flex;
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #eeeeee;
+}
+
+.list-container .list-left {
+    flex: 1;
+}
+
+.list-container .list-left .left-img {
+    width: 220rpx;
+    height: 160rpx;
+    border: 2rpx solid #eeeeee;
+}
+
+.list-container .list-right {
+    width: calc(100% - 220rpx);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20rpx;
+}
+
+.list-container .list-right .title {
+    font-size: 28rpx;
+    font-weight: 500;
+    color: #333333;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.list-container .list-right .desc {
+    font-size: 24rpx;
+    color: #999999;
+    position: relative;
+}
+
+.list-container .list-right .desc .icon-serve {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8rpx 20rpx;
+    border: 2rpx solid orange;
+    font-size: 20rpx;
+    color: orange;
+    border-radius: 20rpx;
+}

@@ -37,7 +37,7 @@ Component({
       // 收藏
       collect: {
         img: 'https://image.ibuycoinamc.com/uploads/shop/20190506/059a0809a3ad97589e91c4d933173eef41299.png', // empty-collect@2x.png
-        msg: '还没有任何收藏哟～',
+        msg: '努力建设中，敬请期待～',
       },
       // 优惠券
       coupon: {
