@@ -16,6 +16,7 @@
     background: #ffffff;
     display: flex;
     padding: 0 30rpx;
+    z-index: 100;
 }
 
 .page-home .page-header .section-search .location {
@@ -37,7 +38,7 @@
     height: 50rpx;
     background: #f3f3f3;
     border-radius: 30rpx;
-    font-size: 24rpx;
+    font-size: 22rpx;
     color: #999999;
     padding-left: 60rpx;
     position: relative;
@@ -49,9 +50,15 @@
     top: 12rpx;
 }
 
+.page-home .page-header .section-search .serach-input .close-icon {
+    position: absolute;
+    z-index: 10;
+    right: 20rpx;
+    top: 12rpx;
+}
+
 .page-home .page-header .slider-img {
     width: 100%;
-    height: 400rpx;
 }
 
 .page-home .page-header .slider-img .test-iamge {
@@ -65,13 +72,19 @@
 
 .page-home .page-body .block-item {
     display: inline-block;
-    width: 187.5rpx;
+    width: 187.4rpx;
     height: 80rpx;
     font-size: 28rpx;
     text-align: center;
     line-height: 80rpx;
     border-bottom: 1rpx solid #eeeeee;
     border-right: 1rpx solid #eeeeee;
+}
+
+.page-home .page-body .block-item .swt-logo {
+    width: 50rpx;
+    height: 50rpx;
+    vertical-align: middle;
 }
 
 .un-active {
@@ -88,14 +101,14 @@
     padding: 0 30rpx;
 }
 
-.page-home .page-footer .title-ch {
+.page-home .title-ch {
     font-size: 30rpx;
     color: #333333;
     font-weight: bold;
     padding-bottom: 20rpx;
 }
 
-.page-home .page-footer .title-ch .title-en {
+.page-home .title-ch .title-en {
     font-size: 20rpx;
     color: #999999;
     padding-left: 10rpx;

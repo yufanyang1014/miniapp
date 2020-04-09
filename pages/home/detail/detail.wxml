@@ -1,6 +1,10 @@
 <!--pages/home/detail/detail.wxml-->
 <view class="page-detail">
-  <view class="page-header">建设中...</view>
-  <view class="page-body"></view>
+  <view class="page-header">
+    <image class="image" src="../../../assets/images/test_list.jpeg"  />
+  </view>
+  <view class="page-body">
+    <view class="detail-title">【湖西】国际大厦<view class="icon-serve">供给</view></view>
+  </view>
   <view class="page-footer"></view>
 </view>

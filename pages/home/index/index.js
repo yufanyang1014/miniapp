@@ -21,38 +21,51 @@ Component({
    * 组件的初始数据
    */
   data: {
+    swiper: {
+      indicatorDots: true,
+      vertical: false,
+      autoplay: true,
+      interval: 2000,
+      duration: 500,
+    },
     activeIndex: 0,
+    inputVal: '',
+    background: ['../../../assets/images/test1.jpeg', '../../../assets/images/test2.jpeg'],
     dataMockBlock: [
       {
-        title: '土地',
+        title: '湖东',
+        jump: false,
       },
       {
-        title: '园区',
+        title: '湖西',
+        jump: false,
       },
       {
-        title: '写字楼',
+        title: '独墅湖高教区',
+        jump: false,
       },
       {
-        title: '商业体',
+        title: '高贸区',
+        jump: false,
       },
       {
-        title: '品牌',
+        title: '阳澄湖度假区',
+        jump: false,
       },
       {
-        title: '资本',
+        title: '其他区域',
+        jump: false,
       },
       {
-        title: '运营',
-      },
-      {
-        title: '其他合作单位',
+        title: '施沃特',
+        jump: true,
       }
     ],
     dataMockList: [
       {
         image: '',
-        title: '【华南区】熊猫小镇',
-        name: '浙南商务局',
+        title: '【湖西】国际大厦',
+        name: '武侯区楼宇办',
         time: '2020-03-04',
       },
       {
@@ -75,14 +88,21 @@ Component({
    */
   methods: {
     handlerChange(e) {
-      const { idx } = e.currentTarget.dataset;
+      const { jump, idx } = e.currentTarget.dataset;
       this.setData({ activeIndex: idx });
-      if (idx === 7) {
+      if (jump) {
         wx.navigateToMiniProgram({
           appId: 'wx9e0b65bedfdb26e7',
           path: '',
         })
       }
     },
+    handlerInput(e) {
+      const { value } = e.detail;
+      this.setData({ inputVal: value });
+    },
+    clearInput() {
+      this.setData({ inputVal: '' });
+    }
   },
 })

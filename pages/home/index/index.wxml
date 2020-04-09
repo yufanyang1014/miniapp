@@ -3,20 +3,39 @@
   <view class="page-header">
     <view class="section-search">
       <view class="location"><van-icon name="location-o" custom-class="location-o" />苏州</view>
-      <input placeholder="请输入标题进行搜索" class="serach-input"><van-icon name="search" class="search-icon" /></input>
+      <input placeholder="请输入标题进行搜索" class="serach-input" value="{{inputVal}}" bindinput="handlerInput">
+        <van-icon name="search" class="search-icon" />
+        <van-icon name="close" wx:if="{{inputVal}}" bindtap="clearInput" class="close-icon"/>
+      </input>
     </view>
     <view class="slider-img">
-      <image class="test-iamge" src="../../../assets/images/test.jpeg"/>
+      <swiper indicator-dots="{{swiper.indicatorDots}}"
+            autoplay="{{swiper.autoplay}}" 
+            interval="{{swiper.interval}}"
+            duration="{{swiper.duration}}">
+        <block wx:for="{{background}}" 
+                wx:for-item="item"
+                wx:key="index">
+          <swiper-item>
+            <image class="test-iamge" src="{{item}}"/>
+          </swiper-item>
+        </block>
+      </swiper>
     </view>
   </view>
   <view class="page-body">
+    <!-- <view class="title-ch">代理机构</view> -->
     <view class="block-item {{ activeIndex===index ? 'active' : 'un-active' }}"
         wx:for="{{dataMockBlock}}" 
         wx:for-index="index" 
         wx:for-item="item"
         wx:key="index"
+        data-jump="{{item.jump}}"
         data-idx="{{index}}"
-        bindtap="handlerChange">{{item.title}}</view>
+        bindtap="handlerChange">
+        <image wx:if="{{item.jump}}" class="swt-logo" src="../../../assets/images/swt.jpeg"/>
+        <text wx:else>{{item.title}}</text>
+        </view>
   </view>
   <view class="page-footer">
     <view class="title-ch">苏州机遇<text class="title-en">OPPORTUNITIES IN JIANGSU</text></view>
