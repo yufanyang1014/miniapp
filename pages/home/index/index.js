@@ -27,6 +27,7 @@ Component({
       autoplay: true,
       interval: 2000,
       duration: 500,
+      color: 'orangered',
     },
     activeIndex: 0,
     inputVal: '',
@@ -34,31 +35,27 @@ Component({
     dataMockBlock: [
       {
         title: '湖东',
-        jump: false,
       },
       {
         title: '湖西',
-        jump: false,
       },
       {
         title: '独墅湖高教区',
-        jump: false,
       },
       {
         title: '高贸区',
-        jump: false,
       },
       {
         title: '阳澄湖度假区',
-        jump: false,
       },
       {
         title: '其他区域',
-        jump: false,
       },
       {
-        title: '施沃特',
-        jump: true,
+        title: '联合办公',
+      },
+      {
+        title: '产业园',
       }
     ],
     dataMockList: [
@@ -88,20 +85,20 @@ Component({
    */
   methods: {
     handlerChange(e) {
-      const { jump, idx } = e.currentTarget.dataset;
+      const { idx } = e.currentTarget.dataset;
       this.setData({ activeIndex: idx });
-      if (jump) {
-        wx.navigateToMiniProgram({
-          appId: 'wx9e0b65bedfdb26e7',
-          path: '',
-        })
-      }
+    },
+    handlerJumpApp() {
+      wx.navigateToMiniProgram({
+        appId: 'wx9e0b65bedfdb26e7',
+        path: '',
+      })
     },
     handlerInput(e) {
       const { value } = e.detail;
       this.setData({ inputVal: value });
     },
-    clearInput() {
+    clearInput(e) {
       this.setData({ inputVal: '' });
     }
   },

@@ -38,3 +38,16 @@
     color: orange;
     border-radius: 20rpx;
 }
+
+.page-detail .page-body .section-detail {
+    font-size: 20rpx;
+    color: #999999;
+    line-height: 2;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #eeeeee;
+}
+
+.page-detail .page-body .section-detail .half-con {
+    width: 50%;
+    float: left;
+}

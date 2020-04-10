@@ -12,7 +12,8 @@
       <swiper indicator-dots="{{swiper.indicatorDots}}"
             autoplay="{{swiper.autoplay}}" 
             interval="{{swiper.interval}}"
-            duration="{{swiper.duration}}">
+            duration="{{swiper.duration}}"
+            indicator-color="{{swiper.color}}">
         <block wx:for="{{background}}" 
                 wx:for-item="item"
                 wx:key="index">
@@ -24,18 +25,21 @@
     </view>
   </view>
   <view class="page-body">
-    <!-- <view class="title-ch">代理机构</view> -->
+    <view class="section-agent">
+      <view class="title-ch">代理机构<text class="title-en">AGENCY</text></view>
+      <view class="agent-con">
+        <image bindtap="handlerJumpApp" class="swt-logo" src="../../../assets/images/swt.jpeg"/>
+      </view>
+    </view>
     <view class="block-item {{ activeIndex===index ? 'active' : 'un-active' }}"
         wx:for="{{dataMockBlock}}" 
         wx:for-index="index" 
         wx:for-item="item"
         wx:key="index"
-        data-jump="{{item.jump}}"
         data-idx="{{index}}"
         bindtap="handlerChange">
-        <image wx:if="{{item.jump}}" class="swt-logo" src="../../../assets/images/swt.jpeg"/>
-        <text wx:else>{{item.title}}</text>
-        </view>
+        <text>{{item.title}}</text>
+      </view>
   </view>
   <view class="page-footer">
     <view class="title-ch">苏州机遇<text class="title-en">OPPORTUNITIES IN JIANGSU</text></view>
