@@ -1,10 +1,10 @@
-import http from './http/index';
+import http from './http/main';
 
 /**
- * 获取用户信息
+ * 获取首页信息
  */
-// export const siteOfficialVerifyApi = (params, config) => (
-//   http.post('/site/officialverify', params, { ...config })
-// );
+export const bannerGetByTypeApi = (params, config) => (
+  http.post('/banner/getByType', params, { ...config })
+);
 
 

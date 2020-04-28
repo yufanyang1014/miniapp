@@ -1,18 +1,20 @@
 <!--pages/home/detail/detail.wxml-->
 <view class="page-detail">
   <view class="page-header">
-    <image class="image" src="../../../assets/images/test_list.jpeg"  />
+    <image class="image" :src="{{ curDetail.linkUrl }}" />
   </view>
   <view class="page-body">
-    <view class="detail-title">【湖西】国际大厦<view class="icon-serve">供给</view></view>
+    <view class="detail-title">【{{ curDetail.fifthItem }}】{{ curDetail.title }}<view class="icon-serve">供给</view></view>
     <view class="section-detail">
-      <view class="half-con">发布来源：<text class="value">苏州机遇</text></view>
-      <view class="half-con">信息类型：<text class="value">土地</text></view>
-      <view class="half-con">发布人：<text class="value">武侯区楼宇办</text></view>
-      <view class="half-con">发布时间：<text class="value">2020-03-04</text></view>
-      <view class="line-con">发布商圈：<text class="value">-</text></view>
-      <view class="line-con">关联楼宇：<text class="value">-</text></view>
+      <view class="half-con">发布来源：<text class="value">{{ curDetail.fourthItem || '-' }}</text></view>
+      <view class="half-con">信息类型：<text class="value">{{ curDetail.firstItem || '-' }}</text></view>
+      <view class="half-con">发布人：<text class="value">{{ curDetail.bannerName }}</text></view>
+      <view class="half-con">发布时间：<text class="value">{{ curDetail.channel }}</text></view>
+      <view class="line-con">发布商圈：<text class="value">{{ curDetail.secondItem || '-' }}</text></view>
+      <view class="line-con">关联楼宇：<text class="value">{{ curDetail.thirdItem || '-' }}</text></view>
     </view>
-
+    <view class="section-more" wx:if="{{curDetail.sixthItem}}">
+      {{ curDetail.sixthItem }}
+    </view>
   </view>
 </view>

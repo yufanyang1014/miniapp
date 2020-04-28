@@ -17,19 +17,16 @@ const config = {
     appId: 'wx65600876d6ec101e',
     appName: '楼促会',
     baseURL: 'https://agenttest.ibuycoinamc.com',
-    h5Url: 'https://h5test.ibuycoinamc.com',
   },
   test: {
     appId: 'wx65600876d6ec101e',
     appName: '楼促会',
-    baseURL: 'https://agenttest.ibuycoinhd.com',
-    h5Url: 'https://h5test.ibuycoinamc.com',
+    baseURL: 'http://118.31.47.53:8078',
   },
   production: {
     appId: 'wx65600876d6ec101e',
     appName: '楼促会',
     baseURL: 'https://agent.ibuycoinamc.com',
-    h5Url: 'https://h5.ibuycoinamc.com',
   },
 
   platformType: 3,

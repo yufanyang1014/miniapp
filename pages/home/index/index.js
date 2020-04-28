@@ -1,5 +1,6 @@
 // pages/home/index/index.js
 import computedBehavior from '../../../miniprogram_npm/miniprogram-computed/index';
+import { bannerGetByTypeApi } from '../../../service/home';
 
 Component({
   behaviors: [computedBehavior],
@@ -30,63 +31,70 @@ Component({
       color: 'orangered',
     },
     activeIndex: 0,
-    inputVal: '',
-    background: ['../../../assets/images/test1.jpeg', '../../../assets/images/test2.jpeg'],
-    dataMockBlock: [
-      {
-        title: '湖东',
-      },
-      {
-        title: '湖西',
-      },
-      {
-        title: '独墅湖高教区',
-      },
-      {
-        title: '高贸区',
-      },
-      {
-        title: '阳澄湖度假区',
-      },
-      {
-        title: '其他区域',
-      },
-      {
-        title: '联合办公',
-      },
-      {
-        title: '产业园',
-      }
-    ],
-    dataMockList: [
-      {
-        image: '',
-        title: '【湖西】国际大厦',
-        name: '武侯区楼宇办',
-        time: '2020-03-04',
-      },
-      {
-        image: '',
-        title: '【华北区】浙江省宁波市鄞州区千户家园3区',
-        name: '浙北商务局',
-        time: '2020-03-16',
-      },
-      {
-        image: '',
-        title: '【华西区】浙江省宁波市鄞州区千户家园3区Life慢生活区享受美好的人生遛狗带娃必备的选择',
-        name: '浙西商务局',
-        time: '2020-03-26',
-      },
-    ]
+    bannerImages: [],
+    search: '', // 搜索-名称
+    area: '', // 搜索-地段
+    areaData: [],
+    list: [],
+    pageNum: 1,
+    total: 0,
+    pageSize: 10,
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
+    onShow() {
+      // this.asyncAll();
+      // this.asyncArea();
+      // this.getBannerList();
+    },
+    async asyncArea() {
+      const params = {
+        pageNum: 0,
+        pageSize: 100,
+        "type": 7,
+      }
+      const resData = await bannerGetByTypeApi(params);
+      const areaData = resData.data.list;
+      this.setData({ areaData });
+    },
+    async getBannerList() {
+      const params = {
+        pageNum: 0,
+        pageSize: 100,
+        "type": 3,
+      }
+      const resData = await bannerGetByTypeApi(params);
+      const bannerImages = resData.data.list;
+      this.setData({ bannerImages });
+    },
+    async asyncAll() {
+      const { pageNum, pageSize, search, area } = this.data;
+      const params = {
+        pageNum,
+        pageSize,
+        search,
+        area,
+        "type": 1,
+      }
+      const resData = await bannerGetByTypeApi(params);
+      if (!Number(resData.code)) { 
+        wx.showToast({
+          title: resData.msg,
+          icon: 'none',
+          duration: 2000
+        })
+        return;
+      }
+      const { total, list } = resData.data;
+      this.setData({ list, total })
+    },
     handlerChange(e) {
-      const { idx } = e.currentTarget.dataset;
-      this.setData({ activeIndex: idx });
+      const { idx, area } = e.currentTarget.dataset;
+      this.setData({ activeIndex: idx, area });
+      this.asyncAll();
     },
     handlerJumpApp() {
       wx.navigateToMiniProgram({
@@ -94,12 +102,18 @@ Component({
         path: '',
       })
     },
-    handlerInput(e) {
+    bindconfirm(e) {
       const { value } = e.detail;
-      this.setData({ inputVal: value });
+      this.setData({ search: value });
+      wx.showToast({
+        title: value,
+        icon: 'none',
+        duration: 2000
+      })
+      // this.asyncAll();
     },
-    clearInput(e) {
-      this.setData({ inputVal: '' });
-    }
+    // clearInput(e) {
+    //   this.setData({ search: '' });
+    // }
   },
 })

@@ -3,6 +3,8 @@ import config from '../../app.config';
 import { humpToUnderline, underlineToHump } from '../../utils/index';
 
 const { baseURL, version } = config;
+console.log('baseURL');
+console.log(baseURL);
 
 const instance = axios.create({
   baseURL,

@@ -51,3 +51,9 @@
     width: 50%;
     float: left;
 }
+
+.page-detail .page-body .section-more {
+    font-size: 24rpx;
+    color: #333333;
+    line-height: 1.4;
+}

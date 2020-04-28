@@ -3,9 +3,13 @@
   <view class="page-header">
     <view class="section-search">
       <view class="location"><van-icon name="location-o" custom-class="location-o" />苏州</view>
-      <input placeholder="请输入标题进行搜索" class="serach-input" value="{{inputVal}}" bindinput="handlerInput">
+      <input placeholder="请输入标题进行搜索" 
+      class="serach-input" 
+      value="{{search}}"
+      confirm-type="search" 
+      bindconfirm="bindconfirm">
         <van-icon name="search" class="search-icon" />
-        <van-icon name="close" wx:if="{{inputVal}}" bindtap="clearInput" class="close-icon"/>
+        <!-- <van-icon name="close" wx:if="{{search}}" bindtap="clearInput" class="close-icon"/> -->
       </input>
     </view>
     <view class="slider-img">
@@ -14,11 +18,11 @@
             interval="{{swiper.interval}}"
             duration="{{swiper.duration}}"
             indicator-color="{{swiper.color}}">
-        <block wx:for="{{background}}" 
+        <block wx:for="{{bannerImages}}" 
                 wx:for-item="item"
                 wx:key="index">
           <swiper-item>
-            <image class="test-iamge" src="{{item}}"/>
+            <image class="test-iamge" src="{{item.linkUrl}}"/>
           </swiper-item>
         </block>
       </swiper>
@@ -32,26 +36,29 @@
       </view>
     </view>
     <view class="block-item {{ activeIndex===index ? 'active' : 'un-active' }}"
-        wx:for="{{dataMockBlock}}" 
+        wx:for="{{areaData}}" 
         wx:for-index="index" 
         wx:for-item="item"
         wx:key="index"
         data-idx="{{index}}"
+        data-area="{{item.title}}"
         bindtap="handlerChange">
         <text>{{item.title}}</text>
       </view>
   </view>
   <view class="page-footer">
-    <view class="title-ch">苏州机遇<text class="title-en">OPPORTUNITIES IN JIANGSU</text></view>
-    <view wx:for="{{dataMockList}}" 
+    <view class="title-ch">会员项目<text class="title-en">MEMBERSHIP PROJECT</text></view>
+    <view wx:for="{{list}}" 
         wx:for-index="index" 
         wx:for-item="item"
         wx:key="index">
       <list-item 
-        image="{{item.image}}"
+        linkUrl="{{item.linkUrl}}"
         title="{{item.title}}"
-        name="{{item.name}}"
-        time="{{item.time}}"/>
+        bannerName="{{item.bannerName}}"
+        channel="{{item.channel}}"
+        fifthItem="{{item.fifthItem}}"
+        objJson="{{item}}"/>
     </view>
   </view>
 </view>

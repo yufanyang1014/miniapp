@@ -11,7 +11,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    image: {
+    objJson: {
+      type: Object,
+      value: {},
+    },
+    linkUrl: {
       type: String,
       value: '',
     },
@@ -19,11 +23,15 @@ Component({
       type: String,
       value: '',
     },
-    name: {
+    bannerName: {
       type: String,
       value: '',
     },
-    time: {
+    channel: {
+      type: String,
+      value: '',
+    },
+    fifthItem: {
       type: String,
       value: '',
     }
@@ -41,7 +49,10 @@ Component({
    */
   methods: {
     navigatePage() {
-      wx.navigateTo({ url: '/pages/home/detail/detail' })
+      const { objJson } = this.data;
+      const json = JSON.stringify(objJson);
+      const url = `/pages/home/detail/detail?obj=${json}`
+      wx.navigateTo({ url });
     },
   }
 })

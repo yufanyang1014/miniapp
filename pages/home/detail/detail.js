@@ -18,7 +18,15 @@ Component({
    * 组件的初始数据
    */
   data: {
+    curDetail: {},
+  },
 
+  onLoad: function(options) {
+    // 生命周期函数--监听页面加载
+    const curDetail = JSON.parse(options.obj);
+    this.setData({
+      curDetail,
+    })
   },
 
   /**
