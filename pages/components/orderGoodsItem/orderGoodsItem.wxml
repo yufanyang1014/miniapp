@@ -1,5 +1,5 @@
 <!--pages/components/orderItem/OrderItem.wxml-->
-<view class="ibuy-order-goods-item">
+<!--<view class="ibuy-order-goods-item">
   <view class="ibuy-order-goods-item-cover">
     <image class="ibuy-order-goods-item-cover-img" wx:if="{{img}}" src="{{img}}" mode="scaleToFill" />
   </view>
@@ -28,4 +28,4 @@
       <text class="info-status-warning" wx:if="{{refundStatus === 4}}">{{REFUND_STATUS[refundStatus]}}</text>
     </view>
   </view>
-</view>
+</view>-->

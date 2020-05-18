@@ -7,7 +7,8 @@ const instance = axios.create({
   baseURL,
   responseEncoding: 'utf8',
   headers: {
-    "Content-Type": "application/x-www-form-urlencoded;charset=UTF8"
+    // "Content-Type": "application/x-www-form-urlencoded;charset=UTF8"
+    'Content-Type': 'application/json'
   }
 });
 
@@ -22,7 +23,7 @@ instance.interceptors.response.use((response) => {
   // 1. 用来获取服务器支持http的请求方式
   // 2. 用来检测服务器的性能
   if (response.config.method.toLowerCase() === 'options') return false;
-  if (response.status !== 200) {
+  if (response.statusCode !== 200) {
     return Promise.reject();
   }
   return Promise.resolve(response.data);

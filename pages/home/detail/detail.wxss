@@ -40,7 +40,7 @@
 }
 
 .page-detail .page-body .section-detail {
-    font-size: 20rpx;
+    font-size: 24rpx;
     color: #999999;
     line-height: 2;
     padding: 30rpx 0;
@@ -56,4 +56,6 @@
     font-size: 24rpx;
     color: #333333;
     line-height: 1.4;
+    color: #999999;
+    padding-top: 20rpx;
 }

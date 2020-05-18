@@ -1,5 +1,5 @@
 <!--pages/components/goodsItem/goodsItem.wxml-->
-<view class="{{row.classes}}" bindtap="handlerNavigation">
+<!--<view class="{{row.classes}}" bindtap="handlerNavigation">
   <image class="item-img" wx:if="{{img}}" src="{{img}}" mode="scaleToFill" />
   <view class="item-foot">
     <text class="item-title ellipsis" decode="{{true}}">{{title}}</text>
@@ -9,5 +9,5 @@
       </view>
     </view>
   </view>
-</view>
+</view>-->
   

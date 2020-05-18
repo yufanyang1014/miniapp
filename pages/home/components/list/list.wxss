@@ -45,7 +45,7 @@
 .list-container .list-right .desc .icon-serve {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -20rpx;
     padding: 8rpx 20rpx;
     border: 2rpx solid orange;
     font-size: 20rpx;

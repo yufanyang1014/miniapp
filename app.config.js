@@ -21,12 +21,12 @@ const config = {
   test: {
     appId: 'wx65600876d6ec101e',
     appName: '楼促会',
-    baseURL: 'http://118.31.47.53:8078',
+    baseURL: 'https://house.sipsea.cn/api',
   },
   production: {
     appId: 'wx65600876d6ec101e',
     appName: '楼促会',
-    baseURL: 'https://agent.ibuycoinamc.com',
+    baseURL: 'https://house.sipsea.cn/api',
   },
 
   platformType: 3,

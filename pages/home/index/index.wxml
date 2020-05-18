@@ -60,5 +60,6 @@
         fifthItem="{{item.fifthItem}}"
         objJson="{{item}}"/>
     </view>
+    <load-more tip="{{tip}}" showLoading="{{dataState === 2}}" style="width: 100%"/>
   </view>
 </view>
