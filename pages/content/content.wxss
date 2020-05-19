@@ -1,0 +1,18 @@
+/* components/content/content.wxss */
+
+.zebra-content {
+  width: 100%;
+  box-sizing: border-box;
+  color: #666666;
+}
+.zebra-content image{
+  min-width: 100%;
+  max-width: 100%;
+}
+.zebra-content .rich_img {
+  vertical-align: top;
+}
+.zebra-content .rich_p {
+  margin-top: 0;
+  margin-bottom: 0;
+}

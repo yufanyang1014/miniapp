@@ -27,9 +27,9 @@ Component({
    */
   methods: {
 
-    onLoad(options) {
+    onLoad({ obj }) {
       // 生命周期函数--监听页面加载
-      const curDetail = JSON.parse(options.obj);
+      const curDetail = JSON.parse(decodeURIComponent(obj));
       curDetail.channel = dateFormate('yyyy-MM-dd', new Date(curDetail.channel));
       this.setData({
         curDetail,

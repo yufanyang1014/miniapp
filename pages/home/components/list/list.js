@@ -13,7 +13,7 @@ Component({
   properties: {
     objJson: {
       type: Object,
-      value: {},
+      value: () => {},
     },
     linkUrl: {
       type: String,
@@ -41,6 +41,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    
 
   },
 
@@ -50,7 +51,7 @@ Component({
   methods: {
     navigatePage() {
       const { objJson } = this.data;
-      const json = JSON.stringify(objJson);
+      const json = encodeURIComponent(JSON.stringify(objJson));
       const url = `/pages/home/detail/detail?obj=${json}`
       wx.navigateTo({ url });
     },

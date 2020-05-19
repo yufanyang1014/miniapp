@@ -1,0 +1,2 @@
+<!--components/content/content.wxml-->
+<editor id="{{elementId}}" class="zebra-content ql-editor" read-only="{{true}}"></editor>

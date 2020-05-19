@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "咨询详情",
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "editor-content": "../content/content"
+  }
 }
