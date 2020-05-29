@@ -51,8 +51,9 @@ Component({
   methods: {
     navigatePage() {
       const { objJson } = this.data;
-      const json = encodeURIComponent(JSON.stringify(objJson));
-      const url = `/pages/home/detail/detail?obj=${json}`
+      const json = JSON.stringify(objJson);
+      wx.setStorageSync('json', json);
+      const url = `/pages/home/detail/detail`;
       wx.navigateTo({ url });
     },
   }

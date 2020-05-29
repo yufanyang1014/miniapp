@@ -35,9 +35,10 @@ Component({
     onPullDownRefresh() {
       wx.stopPullDownRefresh();
     },
-    onLoad({ obj }) {
+    onLoad() {
       // 生命周期函数--监听页面加载
-      const curDetail = JSON.parse(decodeURIComponent(obj));
+      const json = wx.getStorageSync('json') || '';
+      const curDetail = JSON.parse(json);
       curDetail.channel = dateFormate('yyyy-MM-dd', new Date(curDetail.channel));
       this.setData({
         curDetail,
