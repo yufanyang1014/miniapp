@@ -2,10 +2,9 @@
 
 .zebra-content {
   width: 100%;
-  box-sizing: border-box;
   color: #666666;
 }
-.zebra-content image{
+.zebra-content image {
   min-width: 100%;
   max-width: 100%;
 }

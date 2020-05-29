@@ -14,7 +14,8 @@
       <view class="line-con">关联楼宇：<text class="value">{{ curDetail.thirdItem || '-' }}</text></view>
     </view>
     <view class="section-more" wx:if="{{curDetail.sixthItem}}">
-      <editor-content value="{{curDetail.sixthItem}}"/>>
+      <editor-content value="{{curDetail.sixthItem}}"/>
     </view>
   </view>
+  <view class="fix-con"></view>
 </view>

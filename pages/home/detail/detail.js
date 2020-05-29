@@ -26,7 +26,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
+  /**
+    * 用户点击右上角分享
+    */
+  onShareAppMessage() {
 
+  },
+    onPullDownRefresh() {
+      wx.stopPullDownRefresh();
+    },
     onLoad({ obj }) {
       // 生命周期函数--监听页面加载
       const curDetail = JSON.parse(decodeURIComponent(obj));

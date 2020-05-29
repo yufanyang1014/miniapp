@@ -1,9 +1,9 @@
 <!--pages/home/components/list/list.wxml-->
-<view class="list-container">
+<view class="list-container" bindtap="navigatePage">
   <view class="list-left">
     <image class="left-img" src="{{linkUrl}}"  />
   </view>
-  <view class="list-right" bindtap="navigatePage">
+  <view class="list-right">
     <view class="title">【{{fifthItem}}】{{title}}</view>
     <view class="desc">
       <view><text class="label">发布人：</text><text class="value">{{bannerName}}</text></view>

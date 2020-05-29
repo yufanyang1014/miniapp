@@ -57,6 +57,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    /**
+    * 用户点击右上角分享
+    */
+    onShareAppMessage() {
+
+    },
     onLoad() {
       this.asyncArea();
       this.getBannerList();
@@ -64,25 +70,25 @@ Component({
     /**
     * 页面相关事件处理函数--监听用户下拉动作
     */
-  async onPullDownRefresh() {
-    wx.showNavigationBarLoading();
-    wx.setNavigationBarTitle({
-      title: '正在刷新',
-    });
-    await this.asyncAll();
-    wx.setNavigationBarTitle({
-      title: '楼促会',
-    });
-    wx.hideNavigationBarLoading();
-    wx.stopPullDownRefresh();
-  },
+    async onPullDownRefresh() {
+      wx.showNavigationBarLoading();
+      wx.setNavigationBarTitle({
+        title: '正在刷新',
+      });
+      await this.asyncAll();
+      wx.setNavigationBarTitle({
+        title: '楼促会',
+      });
+      wx.hideNavigationBarLoading();
+      wx.stopPullDownRefresh();
+    },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-    this.asyncList();
-  },
+    /**
+     * 页面上拉触底事件的处理函数
+     */
+    onReachBottom() {
+      this.asyncList();
+    },
     async asyncArea() {
       const params = {
         pageNum: 1,
@@ -112,7 +118,7 @@ Component({
     },
     // 获取列表
     async asyncList() {
-      const { pagination ,search, area, list } = this.data;
+      const { pagination, search, area, list } = this.data;
       const { pageNum, pageSize } = pagination;
       const params = {
         pageNum,
@@ -130,7 +136,7 @@ Component({
       this.setData(data);
       try {
         const resData = await bannerGetByTypeApi(params);
-        if (!Number(resData.code)) { 
+        if (!Number(resData.code)) {
           wx.showToast({
             title: resData.msg,
             icon: 'none',
@@ -138,7 +144,7 @@ Component({
           })
           return;
         }
-        const allData  = resData.data.list;
+        const allData = resData.data.list;
         allData && allData.forEach(element => {
           element.channel = dateFormate('yyyy-MM-dd', new Date(element.channel));
         });
