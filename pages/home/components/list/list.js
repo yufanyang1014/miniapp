@@ -50,10 +50,8 @@ Component({
    */
   methods: {
     navigatePage() {
-      const { objJson } = this.data;
-      const json = JSON.stringify(objJson);
-      wx.setStorageSync('json', json);
-      const url = `/pages/home/detail/detail`;
+      const { id } = this.data.objJson;
+      const url = `/pages/home/detail/detail?id=${id}`;
       wx.navigateTo({ url });
     },
   }
