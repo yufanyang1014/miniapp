@@ -32,7 +32,8 @@
     <view class="section-agent">
       <view class="title-ch">代理机构<text class="title-en">AGENCY</text></view>
       <view class="agent-con">
-        <image bindtap="handlerJumpApp" class="swt-logo" src="../../../assets/images/swt.jpeg"/>
+        <image bindtap="handlerJumpApp1" class="swt-logo" src="../../../assets/images/jg1.jpeg"/>
+        <image bindtap="handlerJumpApp2" class="swt-logo" src="../../../assets/images/jg2.jpeg"/>
       </view>
     </view>
     <view class="block-item {{ activeIndex===index ? 'active' : 'un-active' }}"

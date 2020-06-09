@@ -51,6 +51,7 @@ Component({
       finished: false,
       dataState: 2,
     },
+    appIds: ['wx9e0b65bedfdb26e7', 'wx637e59095044263b'],
   },
 
   /**
@@ -187,9 +188,15 @@ Component({
       this.setData({ activeIndex: idx, area });
       this.asyncAll();
     },
-    handlerJumpApp() {
+    handlerJumpApp1() {
       wx.navigateToMiniProgram({
         appId: 'wx9e0b65bedfdb26e7',
+        path: '',
+      })
+    },
+    handlerJumpApp2() {
+      wx.navigateToMiniProgram({
+        appId: 'wx637e59095044263b',
         path: '',
       })
     },

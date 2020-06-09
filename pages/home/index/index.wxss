@@ -94,6 +94,11 @@
     width: 80rpx;
     height: 80rpx;
     border-radius: 50%;
+    margin-left: 20rpx;
+}
+
+.page-home .page-body .section-agent .swt-logo:first-child {
+    margin-left: 0rpx;
 }
 
 .un-active {
